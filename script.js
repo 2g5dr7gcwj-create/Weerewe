@@ -18,7 +18,7 @@ const app = document.getElementById('app');
 
 // === الدوال المساعدة ===
 function savePlayers() {
-    localStorage.setItem('salfat_players', JSON.stringify(state.players));
+    localStorage.getItem('salfat_players', JSON.stringify(state.players));
 }
 
 function getRandomStar() {
@@ -27,6 +27,7 @@ function getRandomStar() {
 
 // === واجهة الإعداد ===
 function renderSetup() {
+    // تم إضافة زر الحذف هنا فقط
     const playersHtml = state.players.map((p, i) => `
         <div class="player-item">
             <div class="player-info">
